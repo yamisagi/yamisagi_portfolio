@@ -37,6 +37,7 @@ const config: Config = {
       fontFamily: {
         poppins: [`var(--font-poppins)`, 'sans-serif'],
         sora: [`var(--font-sora)`, 'sans-serif'],
+        pacifico: [`var(--font-pacifico)`, 'cursive'],
       },
     },
   },
