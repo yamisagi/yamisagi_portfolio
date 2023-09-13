@@ -5,6 +5,7 @@ const config: Config = {
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
     container: {
@@ -26,7 +27,7 @@ const config: Config = {
       },
       backgroundImage: {
         explosion: 'url("/bg-explosion.png")',
-        circles: 'url("/bg-circles.png")',
+        circles: 'url("/circles.png")',
         circleStar: 'url("/circle-star.svg")',
         site: 'url("/site-bg.svg")',
       },

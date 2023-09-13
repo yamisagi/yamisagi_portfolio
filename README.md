@@ -68,8 +68,12 @@ In this project, I will use Next.js, Tailwind CSS, TypeScript and Frame Motion t
 ## Roadmap
 
 - [x] Project Setup
-
-
+- [x] Create Components
+- [x] Create Layout
+- [x] Create Pages
+- [x] Implement Tailwind CSS 
+- [x] Implement NavBar
+- [x] Create Links for NavBar
 
 
 
