@@ -77,7 +77,9 @@ In this project, I will use Next.js, Tailwind CSS, TypeScript and Frame Motion t
 - [x] Implement Home Page
 - [x] Style Home Page & Avatar 
 - [x] Implement Responsive Design
-
+- [x] Create Transition for Pages
+- [x] Implement Particles Background
+- [x] Fix Transition for Home Page
 
 
 <p align="center">(Still working on it...)</p>

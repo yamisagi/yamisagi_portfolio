@@ -1,5 +1,3 @@
-import { Variants } from "framer-motion";
-
 export const fadeIn = (direction: string, delay: number) => {
   return {
     hidden: {

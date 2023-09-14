@@ -1,10 +1,10 @@
 'use client';
 import Image from 'next/image';
-import Particles from '@/components/Particles';
+import ParticlesContainer from '@/components/ParticlesCont';
 import Button from '@/components/Button';
 import Avatar from '@/components/Avatar';
 import { motion } from 'framer-motion';
-import { fadeIn } from '@/variants';
+import { fadeIn } from '@/constants/variants';
 import { Pacifico } from 'next/font/google';
 
 const pacifico = Pacifico({
@@ -23,7 +23,7 @@ const Home = () => {
           h-full container mx-auto'
         >
           <motion.h1
-            variants={fadeIn('down', 0.2)}
+            variants={fadeIn('down', 0.6)}
             initial='hidden'
             animate='show'
             exit='hidden'
@@ -35,7 +35,7 @@ const Home = () => {
             </span>
           </motion.h1>
           <motion.p
-            variants={fadeIn('down', 0.3)}
+            variants={fadeIn('down', 0.6)}
             initial='hidden'
             animate='show'
             exit='hidden'
@@ -44,27 +44,30 @@ const Home = () => {
             I am a Front End Developer, I love to create beautiful and
             responsive websites. Using React, Next.js, Tailwind CSS and more.
           </motion.p>
-          <div className='flex justify-center md:hidden relative'>
+          <div className='flex justify-center md:hidden relative z-10'>
             <Button />
           </div>
           <motion.div
-            variants={fadeIn('down', 0.4)}
+            variants={fadeIn('down', 0.6)}
             initial='hidden'
             animate='show'
             exit='hidden'
-            className='hidden md:flex'
+            className='hidden md:flex z-10'
           >
             <Button />
           </motion.div>
         </div>
       </div>
-      <div className='w-[1200px] h-full absolute bottom-0 right-0'>
+      <div className='w-full h-full absolute bottom-0 right-0'>
         <div
-          className='bg-none md:bg-explosion
-            md:bg-cover md:bg-no-repeat md:bg-right w-full h-full  
-            absolute mix-blend-color-dodge translate-z-0'
+          className='bg-neon bg-cover bg-center 
+                     md:bg-cover md:bg-no-repeat md:bg-right 
+                     w-full h-full  
+                     absolute mix-blend-color-dodge translate-z-0'
         ></div>
-        <div>{/* TODO: Add Particles */}</div>
+        <div>
+          <ParticlesContainer />
+        </div>
         <motion.div
           variants={fadeIn('up', 0.5)}
           initial='hidden'

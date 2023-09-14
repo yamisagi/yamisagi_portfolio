@@ -46,7 +46,7 @@ const Nav = () => {
         className='flex w-full xl:flex-col md:flex-col md:h-max md:rounded-full
         items-center justify-between xl:justify-center gap-y-10
         px-4 md:px-0 xl:px-0 h-[80px] xl:h-max py-8 
-        bg-white/10 backdrop-blur-sm text-3xl xl:text-xl md:text-2xl xl:rounded-full
+        bg-white/10 backdrop-blur-md text-3xl xl:text-xl md:text-2xl xl:rounded-full
         rounded-t-lg
         '
       >
@@ -57,18 +57,15 @@ const Nav = () => {
                 ${pathname === item.path && 'text-accent'}
                 hover:text-white/75 
                 relative flex items-center group
-                transition-colors 
+                md:transform md:hover:scale-110
+                md:hover:-translate-y-1 transition-transform 
                 duration-300`}
               href={item.path}
               key={item.name}
             >
-              <div
-                className='absolute
-                pr-14 right-0 hidden xl:group-hover:flex md:group-hover:flex
-              '
-              >
+              <div className='absolute pr-14 right-0 hidden md:group-hover:flex'>
                 <div
-                  className='bg-white backdrop-blur-sm rounded-[3px] 
+                  className='bg-white backdrop-blur-md rounded-[3px] 
                 relative flex text-primary items-center p-2'
                 >
                   <div

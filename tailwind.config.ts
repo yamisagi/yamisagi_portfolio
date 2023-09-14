@@ -27,6 +27,7 @@ const config: Config = {
       },
       backgroundImage: {
         explosion: 'url("/bg-explosion.png")',
+        neon: 'url("/bg-neon.png")',
         circles: 'url("/circles.png")',
         circleStar: 'url("/circle-star.svg")',
         site: 'url("/site-bg.svg")',
