@@ -81,6 +81,7 @@ In this project, I will use Next.js, Tailwind CSS, TypeScript and Frame Motion t
 - [x] Implement Particles Background
 - [x] Fix Transition for Home Page
 - [x] Implement Header & Social Media Links
+- [x] Improve About Page
 
 
 <p align="center">(Still working on it...)</p>

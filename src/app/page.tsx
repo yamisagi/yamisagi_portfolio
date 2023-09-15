@@ -73,7 +73,9 @@ const Home = () => {
                      absolute mix-blend-color-dodge translate-z-0'
         ></div>
         <div>
-          <ParticlesContainer />
+          {/* <ParticlesContainer />
+          // TODO: Uncomment when Project is ready
+          */}
         </div>
         <motion.div
           variants={fadeIn('up', 0.5)}
