@@ -41,8 +41,15 @@ const Home = () => {
             exit='hidden'
             className='max-w-sm md:max-w-xl mx-auto md:mx-0 mb-10 md:mb-16'
           >
-            I am a Front End Developer, I love to create beautiful and
-            responsive websites. Using React, Next.js, Tailwind CSS and more.
+            I am a <span className='text-amber-500'>Front End Developer</span>,
+            I love to create beautiful and responsive websites. Using{' '}
+            <span className='text-teal-500'>React</span>,{' '}
+            <span className='text-purple-500'>Next.js</span>,{' '}
+            <span className='text-yellow-500'>Typescript</span>,{' '}
+            <span className='text-green-500'>Styled Components</span>,{' '}
+            <span className='text-blue-500'>Material UI</span>,{' '}
+            <span className='text-red-500'>Bootstrap</span>,{' '}
+            <span className='text-pink-500'>Tailwind CSS</span> and more.
           </motion.p>
           <div className='flex justify-center md:hidden relative z-10'>
             <Button />
