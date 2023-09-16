@@ -108,7 +108,11 @@ const About = () => {
           initial='hidden'
           animate='show'
           exit='hidden'
-          className='flex flex-col w-full md:mr-28 md:max-w-[35%] h-[480px]'
+          className='flex flex-col w-full md:mr-28 md:max-w-[35%] h-[480px]
+            sm:overflow-y-auto 
+            sm:scrollbar-none
+            z-10
+          '
         >
           <div className='flex gap-x-4 md:gap-x-8 mx-auto md:mx-0 mb-6'>
             {aboutData.map((item, i) => {
@@ -118,7 +122,7 @@ const About = () => {
                   className={`
                     ${
                       index === i &&
-                      'text-accent after:bg-accent after:w-full after:transition-all after:duration-500 transition-colors duration-500'
+                      'text-accent after:bg-[#B4005C] after:w-full after:transition-all after:duration-500 transition-colors duration-500'
                     }
                     cursor-pointer capitalize xl:text-2xl md:text-xl sm:text-xl
                     relative after:w-8 after:h-[2px] after:bg-white after:absolute
@@ -134,6 +138,7 @@ const About = () => {
           <div
             className='py-2 md:py-6 flex flex-col gap-y-2 md:gap-y-4 
             items-center md:items-start md:px-4 md:pr-10 md:pl-0
+            
           '
           >
             {aboutData[index].info.map((item, i) => {

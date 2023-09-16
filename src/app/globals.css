@@ -9,20 +9,24 @@
 .swiper-pagination-horizontal.swiper-pagination-bullets
   .swiper-pagination-bullet {
   margin-top: 5rem;
-  background-color: #B4005C;
+  background-color: #b4005c;
 }
 
 .swiper-button-next:after,
 .swiper-button-prev:after,
 .swiper-button-next:after,
 .swiper-rtl .swiper-button-prev:after {
-  color: #B4005C;
+  color: #b4005c;
+}
+.mobile-scroll {
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
 }
 
 @keyframes transition-bounce {
   0% {
     transform: translateY(0);
-    color: #B4005C;
+    color: #b4005c;
   }
   50% {
     transform: translateY(-10px);
@@ -30,7 +34,7 @@
   }
   100% {
     transform: translateY(0);
-    color: #B4005C;
+    color: #b4005c;
   }
 }
 

@@ -18,14 +18,15 @@ const WorkSlider = () => {
         clickable: true,
       }}
       modules={[Pagination]}
-      className='md:h-[480px] h-[280px]'
+      className='md:h-[480px] h-[280px] w-full'
     >
       {workSlides.slides.map((slide, index) => {
         return (
           <SwiperSlide key={index}>
             <div
-              className='grid grid-cols-2 grid-rows-2 gap-4 p-10
-            md:h-[480px] h-[280px] rounded-lg cursor-pointer '
+              className='grid grid-cols-2 grid-rows-2 gap-4 p-8
+            md:h-[480px] h-[280px] rounded-lg cursor-pointer 
+            w-[90%] mx-auto'
             >
               {slide.images.map((image, i) => {
                 return (
@@ -42,8 +43,9 @@ const WorkSlider = () => {
                         src={image.path}
                         alt={image.title}
                         width={500}
-                        height={300}
-                        className='object-cover object-center rounded-lg'
+                        height={500}
+                        layout='intrinsic'
+                        className='rounded-lg object-cover object-center'
                       />
                       <div
                         className='absolute inset-0 bg-gradient-to-l 

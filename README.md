@@ -88,7 +88,10 @@ In this project, I will use Next.js, Tailwind CSS, TypeScript and Frame Motion t
 - [x] Create Work Page & Implement Works
 - [x] Implement Swiper for Work Page
 - [x] Implement Grid Slide for Work Page
-
+- [x] Create Contact Page & Implement Contact Form
+- [x] Fix About Page for Mobile View
+- [x] Project Deployment
+- [x] Project Done 🎉
 
 
 
