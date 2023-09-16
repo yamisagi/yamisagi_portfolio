@@ -77,33 +77,49 @@ export const workSlides: WorkSlides = {
     {
       images: [
         {
-          title: 'title',
-          path: '/recipeapp.png',
-          url: 'https://github.com/yamisagi/recipe_app',
+          title: 'Milestone App',
+          path: '/milestoneapp.png',
+          url: 'https://milestone-app-ecru.vercel.app',
         },
         {
-          title: 'title',
-          path: '/toodem.png',
-          url: 'https://github.com/yamisagi/tood_em',
+          title: 'RapidChart App',
+          path: '/rapidchartapp.png',
+          url: 'https://yamisagi.github.io/rapid-cart/',
         },
         {
-          title: 'title',
-          path: '/fashionapp.png',
-          url: 'https://github.com/yamisagi/Fashion-App-Clone',
-        },
-      ],
-    },
-    {
-      images: [
-        {
-          title: 'title',
+          title: 'Movie App',
           path: '/movieapp.png',
           url: 'https://movie-app-react-yamisagi.vercel.app/',
         },
         {
-          title: 'title',
+          title: 'Nextflix App',
           path: '/netflixapp.png',
           url: 'https://nextflix-ts-app.vercel.app/',
+        },        
+      ],
+    }
+    ,
+    {
+      images: [
+        {
+          title: 'Recipe App',
+          path: '/recipeapp.png',
+          url: 'https://github.com/yamisagi/recipe_app',
+        },
+        {
+          title: "TooD'em",
+          path: '/toodem.png',
+          url: 'https://github.com/yamisagi/tood_em',
+        },
+        {
+          title: 'Fashion App',
+          path: '/fashionapp.png',
+          url: 'https://github.com/yamisagi/Fashion-App-Clone',
+        },
+        {
+          title: 'News App',
+          path: '/newsapp.png',
+          url: 'https://github.com/yamisagi/news_app',
         },
       ],
     },

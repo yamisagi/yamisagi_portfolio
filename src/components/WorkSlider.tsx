@@ -24,8 +24,8 @@ const WorkSlider = () => {
         return (
           <SwiperSlide key={index}>
             <div
-              className='grid grid-cols-2 grid-rows-2 gap-4
-            md:h-[480px] h-[280px] rounded-lg cursor-pointer'
+              className='grid grid-cols-2 grid-rows-2 gap-4 p-10
+            md:h-[480px] h-[280px] rounded-lg cursor-pointer '
             >
               {slide.images.map((image, i) => {
                 return (
@@ -58,7 +58,11 @@ const WorkSlider = () => {
                         group-hover:xl:-translate-y-20
                         transition-all duration-300'
                     >
-                      <Link href='/work'>
+                      <Link
+                        href={image.url}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                      >
                         <div className='flex items-center gap-x-2 text-[13px] tracking-[0.2em]'>
                           <div className='delay-100'>VISIT</div>
                           <div className='translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150'>
