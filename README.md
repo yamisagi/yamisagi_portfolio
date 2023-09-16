@@ -59,6 +59,10 @@
 <!-- add asset here later -->
 
 
+https://github.com/yamisagi/yamisagi_portfolio/assets/84624853/02d35b23-4d23-45cd-9fef-f3abcf8cf3e2
+
+
+
 In this project, I will use Next.js, Tailwind CSS, TypeScript and Frame Motion to build a portfolio app.
 
 
