@@ -29,7 +29,11 @@ const About = () => {
       >
         <Avatar />
       </motion.div>
-      <div className='container mx-auto mt-5 mb-10 h-full flex flex-col items-center md:flex-row gap-x-6'>
+      <div
+        className='container mx-auto mt-5 mb-10 h-full flex flex-col items-center md:flex-row gap-x-6
+        overflow-y-auto scrollbar-none
+      '
+      >
         <div
           className='flex-1 flex relative flex-col justify-center
           xl:ml-20
@@ -41,9 +45,9 @@ const About = () => {
             initial='hidden'
             animate='show'
             exit='hidden'
-            className='h2 '
+            className='h2'
           >
-            <span className='text-accent'>Innovative concepts</span> <br />{' '}
+            <span className='text-accent'>Innovative concepts</span>{' '}
             <span
               className='bg-gradient-to-r text-white/50 from-accent to-white/30
             color-stop-1 bg-clip-text'
@@ -109,8 +113,7 @@ const About = () => {
           animate='show'
           exit='hidden'
           className='flex flex-col w-full md:mr-28 md:max-w-[35%] h-[480px]
-            sm:overflow-y-auto 
-            sm:scrollbar-none
+            
             z-10
           '
         >
