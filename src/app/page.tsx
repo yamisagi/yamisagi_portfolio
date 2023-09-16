@@ -5,6 +5,7 @@ import Avatar from '@/components/Avatar';
 import { motion } from 'framer-motion';
 import { fadeIn } from '@/constants/variants';
 import { Pacifico } from 'next/font/google';
+import ParticlesContainer from '@/components/ParticlesCont';
 
 const pacifico = Pacifico({
   subsets: ['latin'],
@@ -72,9 +73,7 @@ const Home = () => {
                      absolute mix-blend-color-dodge translate-z-0'
         ></div>
         <div>
-          {/* <ParticlesContainer />
-          // TODO: Uncomment when Project is ready
-          */}
+          <ParticlesContainer />
         </div>
         <motion.div
           variants={fadeIn('up', 0.5)}
