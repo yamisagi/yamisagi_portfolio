@@ -23,7 +23,7 @@ const config: Config = {
       colors: {
         primary: '#131424',
         secondary: '#393A47',
-        accent: '#b4005c',
+        accent: '#B4005C',
       },
       backgroundImage: {
         explosion: 'url("/bg-explosion.png")',
@@ -34,6 +34,7 @@ const config: Config = {
       },
       animation: {
         'spin-slow': 'spin 6s linear infinite',
+        'transition-bounce': 'transition-bounce 1s ease-in-out infinite',
       },
       fontFamily: {
         poppins: [`var(--font-poppins)`, 'sans-serif'],

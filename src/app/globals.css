@@ -8,14 +8,29 @@
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets
   .swiper-pagination-bullet {
-  background-color: #f13024;
+  background-color: #B4005C;
 }
 
 .swiper-button-next:after,
 .swiper-button-prev:after,
 .swiper-button-next:after,
 .swiper-rtl .swiper-button-prev:after {
-  color: #f13024;
+  color: #B4005C;
+}
+
+@keyframes transition-bounce {
+  0% {
+    transform: translateY(0);
+    color: #B4005C;
+  }
+  50% {
+    transform: translateY(-10px);
+    color: #fff;
+  }
+  100% {
+    transform: translateY(0);
+    color: #B4005C;
+  }
 }
 
 @layer base {

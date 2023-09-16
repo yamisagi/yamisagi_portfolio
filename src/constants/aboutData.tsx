@@ -1,4 +1,9 @@
-import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact } from 'react-icons/fa';
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJsSquare,
+  FaReact,
+} from 'react-icons/fa';
 import {
   SiFlutter,
   SiDart,
@@ -7,9 +12,19 @@ import {
   SiBootstrap,
   SiTailwindcss,
   SiMui,
+  SiRedux,
 } from 'react-icons/si';
 
-export const aboutData = [
+interface AboutData {
+  title: string;
+  info: {
+    title: string;
+    icons?: JSX.Element[];
+    stage?: string;
+  }[];
+}
+
+export const aboutData: Array<AboutData> = [
   {
     title: 'skills',
     info: [
@@ -19,12 +34,12 @@ export const aboutData = [
           <FaHtml5 key={'html'} />,
           <FaCss3Alt key={'css'} />,
           <FaJsSquare key={'js'} />,
+          <SiRedux key={'redux'} />,
           <FaReact key={'react'} />,
           <SiNextdotjs key={'next'} />,
           <SiTypescript key={'ts'} />,
           <SiBootstrap key={'bs'} />,
           <SiTailwindcss key={'tw'} />,
-          <SiMui key={'mui'} />,
         ],
       },
       {
@@ -41,12 +56,12 @@ export const aboutData = [
     title: 'experience',
     info: [
       {
-        title: 'Technical Consultant - CNDN Sigorta',
-        stage: 'September 2018 - June 2023',
-      },
-      {
         title: 'Frontend Developer Intern - Clarusway',
         stage: 'April 2023 - September 2023',
+      },
+      {
+        title: 'Technical Consultant - CNDN Sigorta',
+        stage: 'September 2018 - June 2023',
       },
     ],
   },

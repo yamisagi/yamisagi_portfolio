@@ -1,6 +1,6 @@
 'use client';
 
-import React, { use } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
 import {
@@ -15,7 +15,7 @@ import {
 export const navData = [
   { name: 'home', path: '/', icon: <HiHome /> },
   { name: 'about', path: '/about', icon: <HiUser /> },
-  { name: 'services', path: '/services', icon: <HiRectangleGroup /> },
+  { name: 'project', path: '/project', icon: <HiRectangleGroup /> },
   { name: 'work', path: '/work', icon: <HiViewColumns /> },
   {
     name: 'testimonials',

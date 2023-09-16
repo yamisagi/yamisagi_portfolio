@@ -1,6 +1,5 @@
 'use client';
-import Image from 'next/image';
-import ParticlesContainer from '@/components/ParticlesCont';
+
 import Button from '@/components/Button';
 import Avatar from '@/components/Avatar';
 import { motion } from 'framer-motion';
@@ -38,7 +37,7 @@ const Home = () => {
             variants={fadeIn('down', 0.6)}
             initial='hidden'
             animate='show'
-            exit='hidden'
+            exit={'hidden'}
             className='max-w-sm md:max-w-xl mx-auto md:mx-0 mb-10 md:mb-16'
           >
             I am a <span className='text-amber-500'>Front End Developer</span>,
@@ -84,7 +83,7 @@ const Home = () => {
           exit='hidden'
           transition={{ ease: 'easeInOut', duration: 0.5 }}
           className='w-full h-full xl:max-w-[737px] xl:max-h-[678px] 
-                      md:max-w-[600px] md:max-h-[550px]
+                      md:max-w-[500px] md:max-h-[440px]
                      absolute bottom-0 right-0'
         >
           <Avatar />

@@ -82,6 +82,15 @@ In this project, I will use Next.js, Tailwind CSS, TypeScript and Frame Motion t
 - [x] Fix Transition for Home Page
 - [x] Implement Header & Social Media Links
 - [x] Improve About Page
+- [x] Create Projects Page & Implement Projects
+- [x] Implement Swiper for Projects Page
+- [x] Fix Swiper module for TypeScript
+- [x] Create Work Page & Implement Works
+- [x] Implement Swiper for Work Page
+- [x] Implement Grid Slide for Work Page
+
+
+
 
 
 <p align="center">(Still working on it...)</p>
