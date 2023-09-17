@@ -19,7 +19,8 @@ const Home = () => {
       <div className='w-full h-full'>
         <div
           className='text-center flex 
-          flex-col justify-center md:pt-40 md:text-left 
+          flex-col justify-center md:pt-40 md:text-left sm:mt-20
+          md:mt-0
           h-full container mx-auto'
         >
           <motion.h1
@@ -39,7 +40,7 @@ const Home = () => {
             initial='hidden'
             animate='show'
             exit={'hidden'}
-            className='max-w-sm md:max-w-xl mx-auto md:mx-0 mb-10 md:mb-16'
+            className='max-w-sm md:max-w-xl mx-auto md:mx-0 mb-10 md:mb-16 z-10'
           >
             I am a <span className='text-amber-500'>Front End Developer</span>,
             I love to create beautiful and responsive websites. Using{' '}
@@ -51,15 +52,17 @@ const Home = () => {
             <span className='text-red-500'>Bootstrap</span>,{' '}
             <span className='text-pink-500'>Tailwind CSS</span> and more.
           </motion.p>
-          <div className='flex justify-center md:hidden relative z-10'>
-            <Button />
+          <div className='flex justify-center md:hidden relative z-20'>
+            <div>
+              <Button />
+            </div>
           </div>
           <motion.div
             variants={fadeIn('down', 0.6)}
             initial='hidden'
             animate='show'
             exit='hidden'
-            className='hidden md:flex z-10'
+            className='hidden md:flex z-20'
           >
             <Button />
           </motion.div>

@@ -3,8 +3,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { HiArrowRight } from 'react-icons/hi2';
+import { isMobile } from 'react-device-detect';
+import { useMediaQuery } from 'react-responsive';
+
 const Button = () => {
-  return (
+  const isXsMobile = useMediaQuery({ query: '(max-width: 375px)' });
+  return !(isMobile && isXsMobile) ? (
     <div className='mx-auto md:mx-0'>
       <Link
         href={'/work'}
@@ -21,6 +25,23 @@ const Button = () => {
             group-hover:animate-pulse transition-all duration-300
           '
         />
+        <HiArrowRight
+          className='absolute text-4xl text-white/75 
+        group-hover:text-accent 
+        group-hover:translate-x-2 
+        group-hover:scale-125
+        group-hover:ease
+        transition-all 
+        duration-500'
+        />
+      </Link>
+    </div>
+  ) : (
+    <div className='mx-auto md:mx-0 mt-5'>
+      <Link
+        href={'/work'}
+        className='relative group flex justify-center items-center'
+      >
         <HiArrowRight
           className='absolute text-4xl text-white/75 
         group-hover:text-accent 

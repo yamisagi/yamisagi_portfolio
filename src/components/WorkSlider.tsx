@@ -58,14 +58,16 @@ const WorkSlider = () => {
                       className='absolute bottom-0 translate-y-full 
                         group-hover:-translate-y-10                         
                         group-hover:xl:-translate-y-20
-                        transition-all duration-300'
+                        transition-all duration-300
+                        sm:text-sm
+                        '
                     >
                       <Link
                         href={image.url}
                         target='_blank'
                         rel='noopener noreferrer'
                       >
-                        <div className='flex items-center gap-x-2 text-[13px] tracking-[0.2em]'>
+                        <div className='flex items-center gap-x-2 text-[10px] md:text-[13px] md:tracking-[0.2em]'>
                           <div className='delay-100'>VISIT</div>
                           <div className='translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150'>
                             PROJECT

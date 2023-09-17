@@ -31,7 +31,7 @@ const About = () => {
       </motion.div>
       <div
         className='container mx-auto mt-5 mb-10 h-full flex flex-col items-center md:flex-row gap-x-6
-        overflow-y-auto scrollbar-none
+        overflow-y-scroll scrollbar-none
       '
       >
         <div
@@ -112,12 +112,9 @@ const About = () => {
           initial='hidden'
           animate='show'
           exit='hidden'
-          className='flex flex-col w-full md:mr-28 md:max-w-[35%] h-[480px]
-            
-            z-10
-          '
+          className='flex flex-col w-full md:mr-28 md:max-w-[35%] h-[480px] z-10'
         >
-          <div className='flex gap-x-4 md:gap-x-8 mx-auto md:mx-0 mb-6'>
+          <div className='flex gap-x-4 md:gap-x-8 mx-auto md:mx-0 mb-2'>
             {aboutData.map((item, i) => {
               return (
                 <div
@@ -139,8 +136,7 @@ const About = () => {
             })}
           </div>
           <div
-            className='py-2 md:py-6 flex flex-col gap-y-2 md:gap-y-4 
-            items-center md:items-start md:px-4 md:pr-10 md:pl-0
+            className='md:py-6 flex flex-col gap-y-2 items-center md:items-start md:px-4 md:pr-10 md:pl-0
             
           '
           >
