@@ -18,10 +18,6 @@
 .swiper-rtl .swiper-button-prev:after {
   color: #b4005c;
 }
-.mobile-scroll {
-  -webkit-overflow-scrolling: touch;
-  overflow-y: scroll;
-}
 
 @keyframes transition-bounce {
   0% {
@@ -39,6 +35,9 @@
 }
 
 @layer base {
+  @media screen and (max-width: 850px) and (orientation: landscape) {
+  
+  }
   body {
     @apply bg-secondary overflow-hidden leading-relaxed;
   }

@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const router = usePathname();
-  const isChanged = router !== '/';
+
   return (
     <html lang='en'>
       <head>

@@ -1,8 +1,11 @@
-import React from 'react';
+'use client';
+import React, { useEffect } from 'react';
 import { Sora } from 'next/font/google';
 import Nav from './Nav';
 import Header from './Header';
 import TopLeftImage from './TopLeftImage';
+import { isMobile } from 'react-device-detect';
+import { useMediaQuery } from 'react-responsive';
 
 const sora = Sora({
   subsets: ['latin'],
@@ -11,14 +14,29 @@ const sora = Sora({
 });
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
+  const isLandScape = useMediaQuery({ query: '(orientation: landscape)' });
+
   return (
     <div
       className={`page bg-site text-white bg-cover bg-no-repeat ${sora.variable} font-sora relative`}
     >
-      <TopLeftImage />
-      <Nav />
-      <Header />
-      {children}
+      {isMobile && isLandScape ? (
+        <div className='flex flex-col m-5 items-center justify-center h-screen'>
+          <h1 className='text-3xl font-bold text-center'>
+            I&apos;m sorry, this site is not available on mobile landscape mode.
+          </h1>
+          <p className='text-center mt-2 text-accent'>
+            Please rotate your device to portrait mode.
+          </p>
+        </div>
+      ) : (
+        <>
+          <TopLeftImage />
+          <Nav />
+          <Header />
+          {children}
+        </>
+      )}
     </div>
   );
 };
