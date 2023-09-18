@@ -1,11 +1,13 @@
 'use client';
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Sora } from 'next/font/google';
 import Nav from './Nav';
 import Header from './Header';
 import TopLeftImage from './TopLeftImage';
 import { isMobile } from 'react-device-detect';
 import { useMediaQuery } from 'react-responsive';
+import { ScrollProvider } from '@/app/context/scrollctx';
+import { ScrollContext } from '@/app/context/scrollctx';
 
 const sora = Sora({
   subsets: ['latin'],
@@ -30,12 +32,12 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           </p>
         </div>
       ) : (
-        <>
+        <ScrollProvider>
           <TopLeftImage />
           <Nav />
           <Header />
           {children}
-        </>
+        </ScrollProvider>
       )}
     </div>
   );

@@ -1,14 +1,37 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useContext, useEffect, useCallback } from 'react';
 import { aboutData } from '@/constants/aboutData';
 import Avatar from '@/components/Avatar';
 import Circles from '@/components/Circles';
 import { motion } from 'framer-motion';
 import { fadeIn } from '@/constants/variants';
 import CountUp from 'react-countup';
+import { ScrollContext } from '@/app/context/scrollctx';
+import { useScrollDirection } from 'react-use-scroll-direction';
+
 
 const About = () => {
   const [index, setIndex] = useState(0);
+  const { scrollState, setScrollState } = useContext(ScrollContext);
+  const { isScrollingUp, isScrollingDown, scrollTargetRef } =
+    useScrollDirection();
+  const scrollRef = useCallback((node: HTMLElement | null) => {
+    if (node !== null) {
+      scrollTargetRef(node);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    if (isScrollingUp) {
+      setScrollState('top');
+    }
+    if (isScrollingDown) {
+      setScrollState('bottom');
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isScrollingUp, isScrollingDown]);
+
   return (
     <div className='h-full bg-primary/30 py-36 md:text-left text-center'>
       <Circles />
@@ -30,8 +53,10 @@ const About = () => {
         <Avatar />
       </motion.div>
       <div
+        ref={scrollRef}
         className='container mx-auto mt-5 mb-10 h-full flex flex-col items-center md:flex-row gap-x-6
         overflow-y-scroll scrollbar-none
+        lg:overflow-y-hidden
       '
       >
         <div

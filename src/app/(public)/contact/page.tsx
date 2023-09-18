@@ -4,40 +4,63 @@ import Circles from '@/components/Circles';
 import { BsArrowRight } from 'react-icons/bs';
 import { motion } from 'framer-motion';
 import { fadeIn } from '@/constants/variants';
+import { useCallback, useContext, useEffect } from 'react';
+import { ScrollContext } from '@/app/context/scrollctx';
+import { useScrollDirection } from 'react-use-scroll-direction';
 
 const Contact = () => {
+  const { scrollState, setScrollState } = useContext(ScrollContext);
+  const { isScrollingUp, isScrollingDown, scrollTargetRef } =
+    useScrollDirection();
+  const scrollRef = useCallback((node: HTMLElement | null) => {
+    if (node !== null) {
+      scrollTargetRef(node);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    if (isScrollingUp) {
+      setScrollState('top');
+    }
+    if (isScrollingDown) {
+      setScrollState('bottom');
+    }
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isScrollingUp, isScrollingDown]);
   return (
     <div className='h-full bg-primary/30 '>
       <div
-        className='container mx-auto 
-        py-40 text-center xl:text-left flex items-center justify-center h-full
-        
-      '
+        className='container mx-auto py-10 text-center xl:text-left flex items-center justify-center h-full  overflow-y-scroll scrollbar-none'
+        ref={scrollRef}
       >
         <div className='flex flex-col w-full max-w-[600px] '>
-          <motion.h2
-            variants={fadeIn('up', 0.2)}
-            initial='hidden'
-            animate='show'
-            exit='hidden'
-            className='h2 text-center mb-12'
-          >
-            Let&apos;s{' '}
-            <span
-              className='
+          {scrollState === 'top' && (
+            <motion.h2
+              variants={fadeIn('up', 0.2)}
+              initial='hidden'
+              animate='show'
+              exit='hidden'
+              className='h2 text-center mb-4'
+            >
+              Let&apos;s{' '}
+              <span
+                className='
               bg-gradient-to-r from-accent to-[#4a22bd] text-transparent bg-clip-text
             '
-            >
-              Talk.
-            </span>
-          </motion.h2>
-          <div className='overflow-y-auto scrollbar-none'>
+              >
+                Talk.
+              </span>
+            </motion.h2>
+          )}
+          <div className='flex flex-col gap-4 w-full mx-auto'>
             <motion.form
               variants={fadeIn('up', 0.4)}
               initial='hidden'
               animate='show'
               exit='hidden'
-              className='flex-1 flex flex-col gap-4 w-full mx-auto'
+              className='flex-1 flex flex-col gap-2 w-full mx-auto'
             >
               <div className='flex gap-x-6 w-full '>
                 <input type='text' placeholder='name' className='input' />

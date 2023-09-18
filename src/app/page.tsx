@@ -53,9 +53,14 @@ const Home = () => {
             <span className='text-pink-500'>Tailwind CSS</span> and more.
           </motion.p>
           <div className='flex justify-center md:hidden relative z-20'>
-            <div>
+            <motion.div
+              variants={fadeIn('down', 0.6)}
+              initial='hidden'
+              animate='show'
+              exit='hidden'
+            >
               <Button />
-            </div>
+            </motion.div>
           </div>
           <motion.div
             variants={fadeIn('down', 0.6)}

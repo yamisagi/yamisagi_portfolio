@@ -1,14 +1,16 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useContext } from 'react';
 import Link from 'next/link';
-import { useRouter, usePathname } from 'next/navigation';
+import { usePathname } from 'next/navigation';
+import { isMobile } from 'react-device-detect';
+import { ScrollContext } from '@/app/context/scrollctx';
+
 import {
   HiHome,
   HiUser,
   HiViewColumns,
   HiRectangleGroup,
-  HiChatBubbleBottomCenterText,
   HiEnvelope,
 } from 'react-icons/hi2';
 
@@ -23,19 +25,23 @@ export const navData = [
     icon: <HiEnvelope />,
   },
 ];
+
 const Nav = () => {
   const pathname = usePathname();
-
+  const { scrollState } = useContext(ScrollContext);
   return (
     <nav
-      className='flex flex-col items-center 
+      className={`flex flex-col items-center 
       xl:justify-center xl:right-[2%] xl:w-16 xl:max-w-md xl:h-screen 
       md:justify-center md:right-[2%] md:w-16 md:max-w-md md:h-screen
       gap-y-4
       fixed h-max bottom-0 
       mt-auto  
       z-50 top-0 w-full 
-      '
+      transition-all duration-300
+      ${scrollState === 'top' && 'transform translate-y-0'}
+      ${scrollState === 'bottom' && 'transform translate-y-full'}
+      `}
     >
       <div
         className='flex w-full xl:flex-col md:flex-col md:h-max md:rounded-full

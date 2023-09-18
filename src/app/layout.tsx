@@ -5,6 +5,7 @@ import { AnimatePresence, delay, motion } from 'framer-motion';
 import Layout from '@/components/Layout';
 import Transition from '@/components/Transition';
 import { useEffect } from 'react';
+import { ScrollProvider } from './context/scrollctx';
 
 // When we use motion.div, we have to make this component use client
 // because the motion.div is a client side component, because of it MetaData is not working
