@@ -8,11 +8,12 @@ import { fadeIn } from '@/constants/variants';
 import CountUp from 'react-countup';
 import { ScrollContext } from '@/app/context/scrollctx';
 import { useScrollDirection } from 'react-use-scroll-direction';
-
+import { useMediaQuery } from 'react-responsive';
 
 const About = () => {
+  const isSmallHeight = useMediaQuery({ query: '(max-height: 750px)' });
   const [index, setIndex] = useState(0);
-  const { scrollState, setScrollState } = useContext(ScrollContext);
+  const { setScrollState } = useContext(ScrollContext);
   const { isScrollingUp, isScrollingDown, scrollTargetRef } =
     useScrollDirection();
   const scrollRef = useCallback((node: HTMLElement | null) => {
@@ -33,7 +34,10 @@ const About = () => {
   }, [isScrollingUp, isScrollingDown]);
 
   return (
-    <div className='h-full bg-primary/30 py-36 md:text-left text-center'>
+    <div
+      className={`h-full bg-primary/30 py-32 md:text-left text-center
+        ${isSmallHeight && 'overflow-y-auto scrollbar-none'}`}
+    >
       <Circles />
       <motion.div
         variants={fadeIn('right', 0.2)}
@@ -43,7 +47,7 @@ const About = () => {
         className='
         hidden 
         xl:flex 
-        xl:h-[550px]
+        xl:h-[600px]
         xl:w-[525px]
         absolute 
         xl:-bottom-0
@@ -54,10 +58,10 @@ const About = () => {
       </motion.div>
       <div
         ref={scrollRef}
-        className='container mx-auto mt-5 mb-10 h-full flex flex-col items-center md:flex-row gap-x-6
+        className={`container mx-auto mt-5 mb-10 h-full flex flex-col items-center md:flex-row gap-x-6
         overflow-y-scroll scrollbar-none
-        lg:overflow-y-hidden
-      '
+        ${isSmallHeight && 'md:h-[600px]'}
+        lg:overflow-y-hidden`}
       >
         <div
           className='flex-1 flex relative flex-col justify-center
