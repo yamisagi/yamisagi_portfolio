@@ -1,4 +1,3 @@
-// Import React & Flutter Icons URL icon
 import { SiReact, SiFlutter } from 'react-icons/si';
 
 interface ProjectData {
@@ -9,6 +8,13 @@ interface ProjectData {
 }
 
 export const projectData: ProjectData[] = [
+  {
+    icon: <SiReact />,
+    title: 'Redux Stockify',
+    description:
+      'This project aims to create a comprehensive stock management application using powerful technologies such as React, React Router, React Custom Hooks, MUI Based Components, as well as tools like Axios, Formik, Yup, and Redux Persist.',
+    url: 'https://redux-stockify-react.vercel.app/',
+  },
   {
     icon: <SiReact />,
     title: 'Nextflix App',
@@ -82,9 +88,9 @@ export const workSlides: WorkSlides = {
           url: 'https://milestone-app-ecru.vercel.app',
         },
         {
-          title: 'RapidChart App',
-          path: '/rapidchartapp.png',
-          url: 'https://yamisagi.github.io/rapid-cart/',
+          title: 'Redux Stockify',
+          path: '/redux-stockify.png',
+          url: 'https://redux-stockify-react.vercel.app/',
         },
         {
           title: 'Movie App',
